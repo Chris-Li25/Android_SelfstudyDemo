@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="chris.li.selfstudy1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ThirdActivity"
+            android:label="ThirdActivity">
+<!--            //部署Activity 和 Category 隐形Intent  使得此Activity可以-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+<!--                加上这段代码后不会报错但是调用不出ThirdActivity 这段代码可以删除-->
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="http" />
+<!--                指定数据的协议部分 当<data>标签中指定的内容和Intent中携带的Data完全一致时，当前活动才能够相应该Intent。
+                    android：scheme为Http，就可以响应所有的Http协议的Intent了。-->
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"
+            android:label="SecondActivity"
+            android:launchMode="singleInstance">
+<!--            指定为singleInstance模式的活动会启动一个新的返回栈来管理这个活动-->
+            <intent-filter>
+                <action android:name="chris.li.activitytest.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="chris.li.activitytest.MY_CATRGORY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:label="This is FirstActivity"
+            android:launchMode="singleTask">
+<!--            每次启动该活动时系统首先会再返回栈中检查是否存在该活动的实例，如果发现已经存在则直接使用改实例，并把在这个活动之上的所有活动统统出栈，如果没有发现就会创建一个新的活动实例-->
+<!--            android:launchMode="singleTop"-->
+<!--            启动活动时如果发现返回栈的栈顶已经是该活动，则认为可以直接使用它，不会再创建新的活动实例-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

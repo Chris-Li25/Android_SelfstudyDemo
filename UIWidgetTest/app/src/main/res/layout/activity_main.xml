@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#00ff00"
+        android:text="This is TextView" />
+<!--    gravity来指定文字的对齐方式 可选值有 top bottom left right center 可以用“|”来同时指定多个值-->
+<!--    text 指定TextView中显示的文本内容-->
+<!--    match_parent 让当前控件的大小和父布局的大小一样，也就是又父布局来决定当前控件的大小。-->
+<!--    wrap_parent表示让当前控件的大小能够刚好包含住里面的内容，也就是由控件来决定当前控件的大小。-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textAllCaps="false"/>
+<!--    textAllCaps = false 禁用自动大写转换-->
+<!--    setOnclickListener可以设置对按钮的监听-->
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type Something here"
+        android:maxLines="2"/>
+<!--    maxLines指定了最大行数，超过这个行数，文本就会向上滚动，eidttext则不会再继续拉伸-->
+<!--    hint可以设置提示性的文字，输入内容后消失-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/image_view"
+        android:src="@drawable/img_1"/>
+<!--    图片通常放在以“drawable“开头的目录下的，空的drawable目录没有指定具体的分辨率，所以不使用它来放置图片，新建一个drawable-xhdpi目录-->
+<!--    src属性给ImageView指定图片-->
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleHorizontal"
+        android:max="100"/>
+<!--    通过android:max属性给进度条设置一个最大值，然后再代码中动态地更改进度条的进度-->
+<!--    style设置进度条的样式-->
+<!--    加载进度条-->
+<!--    android:visibility为控件的可见属性 三个值 visible可见（默认值） invisible不可见但是依然占据着原来的位置和大小 gone不仅不可见而且不在占用任何屏幕空间-->
+
+</LinearLayout>

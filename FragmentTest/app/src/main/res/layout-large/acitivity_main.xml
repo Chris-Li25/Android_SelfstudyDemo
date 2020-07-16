@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    android:orientation="horizontal">
+
+    <fragment
+        android:id="@+id/left_fragment"
+        android:name="chris.li.fragmenttest.LeftFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/right_fragment"-->
+    <!--        android:name="chris.li.fragmenttest.RightFragment"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_weight="1" />-->
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/right_layout"
+            android:background="#000000">
+        </FrameLayout>
+
+    <!--    这是Android种最简单的这一种布局，所有控件默认都会摆放在布局的左上角。由于这里仅需要在布局里放入一个碎片，不需要任何定位-->
+    <!--    因此非常适合使用FrameLayout-->
+
+
+
+</LinearLayout>

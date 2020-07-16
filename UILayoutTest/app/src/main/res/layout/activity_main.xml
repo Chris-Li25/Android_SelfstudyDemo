@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="horizontal">-->
+<!--&lt;!&ndash;    orientation指定空间的排列顺序 vertical为竖直排列 horizontal为水平排列  默认为horizontal&ndash;&gt;-->
+<!--&lt;!&ndash;    设置为horizontal的时候内部控件的宽度不要设置为match_parent 否则会将整个水平方向占满，其他控件就没有可放置的位置了。&ndash;&gt;-->
+<!--&lt;!&ndash;    设置为vertical的时候同理。&ndash;&gt;-->
+
+<!--&lt;!&ndash;    layout_gravity属性，用于指定控件在布局中的对齐方式，需要注意的是 LinearLayout的排列方向是horizontal时，只有垂直方向上的对齐方式才会生效&ndash;&gt;-->
+<!--&lt;!&ndash;    因为此时水平方向是的长度是不固定的&ndash;&gt;-->
+<!--&lt;!&ndash;    同理当排列方向是vertical时，只有水平方向上的对齐方式才会生效&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/button1"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Button 1"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_gravity="top"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/button2"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Button 2"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_gravity="center"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/button3"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Button 3"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_gravity="bottom"/>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    weight可以分配控件占据的比例 如果其他控件没有指定weight的值 那么指定了weight的值的控件会占满剩下的空间&ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:hint="Typr something"-->
+<!--        android:id="@+id/input_message"/>-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/send"-->
+<!--        android:text="Send"/>-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--    -->
+
+<!--</LinearLayout> -->
+<!--                              &lt;!&ndash;线性布局&ndash;&gt;-->
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="horizontal">-->
+
+
+<!--    相对于父布局进行定位-->
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:text="Button 1" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:text="Button 2" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="Button 3" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Button 4" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Button 5" />-->
+
+
+<!--&lt;!&ndash;    相对于控件进行定位&ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/button3"-->
+<!--        android:layout_toLeftOf="@id/button3"-->
+<!--        android:text="Button 1" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/button3"-->
+<!--        android:layout_toRightOf="@id/button3"-->
+<!--        android:text="Button 2" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="Button 3" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/button3"-->
+<!--        android:layout_toLeftOf="@id/button3"-->
+<!--        android:text="Button 4" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/button3"-->
+<!--        android:layout_toRightOf="@id/button3"-->
+<!--        android:text="Button 5" />-->
+
+<!--&lt;!&ndash;    android:layout_alignLeft 表示让一个控件的左边缘和另一个控件的左边缘对齐&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_alignRight 表示让一个控件的右边缘和另一个控件的右边缘对齐&ndash;&gt;-->
+<!--&lt;!&ndash;    剩下ndroid:layout_alignTop android:layout_alignBottom 同理&ndash;&gt;-->
+
+<!--</RelativeLayout>-->
+<!--&lt;!&ndash;相对布局&ndash;&gt;-->
+
+
+<!--<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/text_view"-->
+<!--        android:text="This is TextView"-->
+<!--        android:layout_gravity="left"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/image_view"-->
+<!--        android:src="@mipmap/ic_launcher"-->
+<!--        android:layout_gravity="right"/>-->
+
+<!--</FrameLayout>-->
+<!--&lt;!&ndash;帧布局&ndash;&gt;-->
+
+<androidx.percentlayout.widget.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_gravity="left|top"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:text="Button 1"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_gravity="right|top"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:text="Button 2"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_gravity="left|bottom"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:text="Button 3"
+        />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_gravity="right|bottom"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:text="Button 4"
+        />
+
+</androidx.percentlayout.widget.PercentFrameLayout>
+<!--百分比布局-->
